@@ -3,8 +3,8 @@
 
 ### ✅ Features :
 
-- [x] <b>Vacinas</b><i>(Primeira/Segunda Dose)</i>
-- [x] <b>Casos</b><i>(Casos Ativos/Confirmados/Recuperados)</i>
+- [x] <b>Vacinas</b><i> (Primeira/Segunda Dose) </i>
+- [x] <b>Casos</b><i> (Casos Ativos/Confirmados/Recuperados) </i>
 - [x] <b>Óbitos</b>
 - [x] <b>% de Ocupação da UTI</b>
 - [x] <b>Quantidade de Leitos Livres</b>
