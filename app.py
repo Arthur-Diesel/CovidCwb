@@ -80,13 +80,17 @@ def ativos():
 
 @app.get('/casos_confirmados')
 def confirmados():
-    sopa, hora, dia = scrap()
-    casos_confirmados = sopa.find('span',
-    id='cphBodyMaster_lblConfirmados').get_text()
-    response = make_response(jsonify({'mensagem':'sucesso!', 
-    'casos confirmados':casos_confirmados, 'data':dia, 'hora':hora}))
-    return response, 200
-
+    try:
+        sopa, hora, dia = scrap()
+        casos_confirmados = sopa.find('span',
+        id='cphBodyMaster_lblConfirmados').get_text()
+        response = make_response(jsonify({'mensagem':'sucesso!', 
+        'casos confirmados':casos_confirmados, 'data':dia, 'hora':hora}))
+        return response, 200
+    except:
+        response = make_response(jsonify({'mensagem':'erro!'}))
+        return response, 500
+        
 @app.get('/casos_recuperados')
 def recuperados():
     try:
